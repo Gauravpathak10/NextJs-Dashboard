@@ -308,10 +308,11 @@
 
 .table {
   margin: auto;
-  padding: 20px;
+  padding: 12px;
+  font-size: 13px;
   border-radius: 10px;
   text-align: center;
-  width: 95%;
+  width: 88%;
   color: white;
   background-color: rgb(26, 27, 32);
 }
@@ -427,7 +428,7 @@
   height: 23px;
   border-radius: 25px;
   background-color: rgb(150, 146, 146);
- 
+
 
 }
 

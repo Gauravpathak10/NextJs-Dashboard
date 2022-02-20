@@ -4,11 +4,14 @@ import styles from '../styles/Home.module.css'
 import ImageNext from 'next/image'
 import Imageone from "../public/source/badge.png"
 import { clicked, seened } from "./functions"
+import data from './data.json'
 
 function Header() {
 
 
+
     return (
+
 
         <div className={styles.mainContent}>
             <div className={styles.FirstSection}>
@@ -81,7 +84,7 @@ function Header() {
                     <table className={styles.table}>
                         <tbody>
                             <tr>
-                                <td><FaBitcoin style={{ color: "yellow", fontSize: "17px" }} /> BitCoin </td>
+                                <td> <img src={data.data[0].img} alt="img" style={{ width: "20px" }} /> BitCoin </td>
                                 <td>0.000BNB</td>
                                 <td>0X7779797</td>
                                 <td>0.00000BNB</td>
@@ -101,15 +104,25 @@ function Header() {
                     <table className={styles.table}>
                         <tbody>
                             <tr>
-                                <td><FaBitcoin style={{ color: "greenyellow", fontSize: "17px" }} /> BitCoin </td>
-                                <td>0.000BNB</td>
-                                <td>0X765339</td>
-                                <td>0.0004620BNB</td>
+                                <td style={{display:"flex"}}>
+                                    <img src={data.data[0].img} alt="img" style={{ width: "20px" }} />
+                                    {data.data[0].asset}
+                                    
+                                    <li style={{ fontSize: "12px" }}>
+                                        {data.data[0].type}
+                                        <img src={data.data[0].chain.img} alt="avax" />
+                                    </li>
+                                </td>
+                                <td>0.000BNB
+                                    <li>{data.data[0].state}</li>
+                                </td>
+                                <td>{data.data[0].user}</td>
+                                <td>{data.data[0].referral_earnings}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-
+                {/* <FaBitcoin style={{ color: "greenyellow", fontSize: "17px" }} />  */}
             </section>
         </div>
     )

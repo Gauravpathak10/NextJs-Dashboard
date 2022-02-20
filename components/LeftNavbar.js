@@ -2,6 +2,7 @@ import React from "react";
 import { FaHome, FaUser, FaPagelines, FaArrowLeft, FaGlobe, FaPaperclip, FaQuoteRight, FaSearch, FaDollarSign, FaDownload, FaLockOpen, FaSchool, FaSadCry, FaScrewdriver, FaMoon } from 'react-icons/fa';
 import styles from '../styles/Home.module.css'
 import { fun, isChecked } from "./functions";
+import {data} from './data.json'
 
 function LeftNavbar() {
     return (
@@ -62,7 +63,6 @@ function LeftNavbar() {
                     </label>
 
                 </div>
-
             </section>
 
         </div>
